@@ -42,7 +42,7 @@ else
     fi
 
     KEY="$1"
-    PATHSPEC=$(grep "^${KEY} " "$CONFIG" 2>/dev/null | awk '{print $2}')
+    PATHSPEC=$(grep "^${KEY} " "$CONFIG" 2>/dev/null | awk '{print $2}' 2>/dev/null)
 
     if [[ -z "$PATHSPEC" ]]; then
         echo "fatal: no association found for key '${KEY}'"
