@@ -1,6 +1,6 @@
 # goto
-`goto` is a zsh directory jumping tool. Map keywords to directories and jump to them from anywhere.
-
+zsh directory bookmarking tool. Bind keywords to directories and jump to them from anywhere. 
+ 
 ## Installation
 1. Download and unpack the [latest release](../../releases/latest)
 2. Run the installer:
