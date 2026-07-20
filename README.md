@@ -8,6 +8,7 @@
 ```bash
 $ chmod u+x installer.sh
 $ ./installer.sh
+$ source ~/.zshrc
 ```
 
 ## Uninstallation
@@ -17,6 +18,7 @@ $ ./installer.sh
 ```bash
 $ chmod u+x uninstaller.sh
 $ ./uninstaller.sh
+$ source ~/.zshrc
 ```
 
 
