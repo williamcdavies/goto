@@ -14,5 +14,3 @@ if ! grep -q "goto()" "${TARGET_RC_FILE}"; then
 else
     sed -i "s|^goto().*|goto() { . ${TARGET_SRC_DIR}/src/goto.sh \"\$@\"; }|" "${TARGET_RC_FILE}"
 fi
-
-source ~/.zshrc
