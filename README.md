@@ -1,29 +1,24 @@
 # goto
-`goto` is a zsh directory jumping tool. Map keywords to directories and jump to them from anywhere.
+`goto` is a `zsh` directory jumping tool.
 
 ## Installation
 1. Download and unpack the [latest release](../../releases/latest)
 2. Run the installer:
 
 ```bash
-$ chmod u+x install.sh
-$ ./install.sh
-```
-
-3. Reload zsh configuration:
-
-```bash
-$ source ~/.zshrc
+$ chmod u+x installer.sh
+$ ./installer.sh
 ```
 
 ## Uninstallation
+1. Download and unpack the [latest release](../../releases/latest)
+2. Run the uninstaller
 
 ```bash
-$ rm ~/.local/bin/goto.sh
-$ rm ~/.goto
-$ sed -i '' '/goto()/d' ~/.zshrc
-$ source ~/.zshrc
+$ chmod u+x uninstaller.sh
+$ ./uninstaller.sh
 ```
+
 
 ## Usage
 
@@ -33,18 +28,18 @@ $ source ~/.zshrc
 goto <key>
 ```
 
-### `goto map`
+### `goto bind`
 
 ```bash
-goto map <key> <pathspec>
+goto bind <key> <path>
 ```
 
-## Example
+## Examples
 
 ```bash
-# Create a mapping between `projects` and `~/Documents/Projects`:
+# Create a binding between `projects` and `~/Documents/Projects`:
 $ goto map projects ~/Documents/Projects
 
-# Jump to `~/Documents/Projects` from anywhere
+# Jump to `~/Documents/Projects`
 $ goto projects
 ```
