@@ -1,5 +1,5 @@
 VERSION="goto version 1.0.0"
 
-print_version() {
+version() {
     echo ${VERSION}
 }
