@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 TARGET_RC_FILE="${HOME}/.zshrc"
 TARGET_BIN_DIR="/usr/local/bin"
@@ -11,5 +11,5 @@ chmod u+x "${TARGET_SRC_DIR}/src/goto.sh"
 if ! grep -q "goto()" "${TARGET_RC_FILE}"; then
     echo "goto() { . ${TARGET_SRC_DIR}/src/goto.sh \"\$@\"; }" >> "${TARGET_RC_FILE}"
 else
-    sed -i "s|^goto().*|goto() { . ${TARGET_SRC_DIR}/src/goto.sh \"\$@\"; }|" "${TARGET_RC_FILE}"
+    sed -i '' "s|^goto().*|goto() { . ${TARGET_SRC_DIR}/src/goto.sh \"\$@\"; }|" "${TARGET_RC_FILE}"
 fi
