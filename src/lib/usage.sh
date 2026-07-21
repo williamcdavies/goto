@@ -1,10 +1,7 @@
-PROG_USAGE="usage: goto [-h | --help] [-v | --version] <command>"
-BIND_USAGE="usage: goto bind <key> <pathspec>"
+#!/usr/bin/env zsh
 
-prog_usage() {
-    echo ${PROG_USAGE}
-}
+__goto_usage() {
+    local __USAGE="usage: goto [-h | --help] [-v | --version] <command> [<args>]"
 
-bind_usage() {
-    echo ${BIND_USAGE}
+    echo "${__USAGE}"
 }
