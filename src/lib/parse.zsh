@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
-. "${0:A:h}/help.sh"
-. "${0:A:h}/vars.sh"
+. "${0:A:h}/help.zsh"
+. "${0:A:h}/vars.zsh"
 
 __goto_parse() {
     GOTO_PRINT_HELP=FALSE
