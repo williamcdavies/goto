@@ -38,7 +38,7 @@ __goto_parse_global_opts() {
             
             -*|--*)
                 echo "error: unknown option: '${1}'"
-                help
+                __goto_help
                 
                 return "${GOTO_RETURN_FAILURE}"
                 ;;
