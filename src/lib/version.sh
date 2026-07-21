@@ -1,5 +1,7 @@
-VERSION="goto version 1.0.0"
+#!/usr/bin/env zsh
 
-version() {
-    echo ${VERSION}
+__goto_version() {
+    local __VERSION="goto version 1.0.1"
+
+    echo "${__VERSION}"
 }
