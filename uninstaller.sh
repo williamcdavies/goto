@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 TARGET_RC_FILE="${HOME}/.zshrc"
 TARGET_BIN_DIR="/usr/local/bin"
