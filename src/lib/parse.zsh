@@ -1,6 +1,4 @@
 #!/usr/bin/env zsh
-. "${0:A:h}/help.zsh"
-. "${0:A:h}/vars.zsh"
 
 __goto_parse() {
     GOTO_PRINT_HELP=FALSE
@@ -9,12 +7,12 @@ __goto_parse() {
     GOTO_COMMAND_OPTS=()
     GOTO_COMMAND_ARGS=()
     
-    local __REMAINING=("${@}")
+    local __remaining=("${@}")
 
-    __goto_parse_global_opts  "${__REMAINING[@]}" || return
-    __goto_parse_command      "${__REMAINING[@]}"
-    __goto_parse_command_opts "${__REMAINING[@]}"
-    __goto_parse_command_args "${__REMAINING[@]}"
+    __goto_parse_global_opts  "${__remaining[@]}" || return
+    __goto_parse_command      "${__remaining[@]}" || return
+    __goto_parse_command_opts "${__remaining[@]}" || return
+    __goto_parse_command_args "${__remaining[@]}" || return
 }
 
 __goto_parse_global_opts() {
@@ -38,7 +36,7 @@ __goto_parse_global_opts() {
             
             -*|--*)
                 echo "error: unknown option: '${1}'"
-                __goto_help
+                __goto_usage
                 
                 return "${GOTO_RETURN_FAILURE}"
                 ;;
@@ -49,7 +47,7 @@ __goto_parse_global_opts() {
         esac
     done
 
-    __REMAINING=("${@}")
+    __remaining=("${@}")
 }
 
 __goto_parse_command() {
@@ -58,7 +56,7 @@ __goto_parse_command() {
         shift
     fi
 
-    __REMAINING=("${@}")
+    __remaining=("${@}")
 }
 
 __goto_parse_command_opts() {
@@ -81,7 +79,7 @@ __goto_parse_command_opts() {
         esac
     done
 
-    __REMAINING=("${@}")
+    __remaining=("${@}")
 }
 
 __goto_parse_command_args() {
