@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+GOTO_RETURN_SUCCESS=0
+GOTO_RETURN_FAILURE=1

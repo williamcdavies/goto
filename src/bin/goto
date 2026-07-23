@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+. /usr/local/lib/goto/goto.zsh "$@"

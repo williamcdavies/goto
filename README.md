@@ -1,50 +1,53 @@
 # goto
-zsh directory bookmarking tool. Bind keywords to directories and jump to them from anywhere. 
+`goto` is a directory jumping tool built for macOS.
  
 ## Installation
 1. Download and unpack the [latest release](../../releases/latest)
 2. Run the installer:
 
 ```bash
-$ chmod u+x install.sh
-$ ./install.sh
-```
-
-3. Reload zsh configuration:
-
-```bash
+$ chmod u+x installer.sh
+$ sudo ./installer.sh
 $ source ~/.zshrc
 ```
 
 ## Uninstallation
+1. Download and unpack the [latest release](../../releases/latest)
+2. Run the uninstaller
 
 ```bash
-$ rm ~/.local/bin/goto.sh
-$ rm ~/.goto
-$ sed -i '' '/goto()/d' ~/.zshrc
+$ chmod u+x uninstaller.sh
+$ sudo ./uninstaller.sh
 $ source ~/.zshrc
 ```
+
 
 ## Usage
 
 ### `goto`
+Jumps to the directory bound to `<key>`.
 
 ```bash
 goto <key>
 ```
 
-### `goto map`
+### `goto bind`
+Creates a binding between a keyword and a system path.
 
 ```bash
-goto map <key> <pathspec>
+goto bind <key> <path>
 ```
 
-## Example
+### `goto unbind`
+Removes the binding between a keyword and a system path.
 
 ```bash
-# Create a mapping between `projects` and `~/Documents/Projects`:
-$ goto map projects ~/Documents/Projects
+goto unbind <key>
+```
 
-# Jump to `~/Documents/Projects` from anywhere
-$ goto projects
+### `goto list`
+Lists all keyword-path bindings.
+
+```bash
+goto list
 ```
