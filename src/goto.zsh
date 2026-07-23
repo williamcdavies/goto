@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+. "${0:A:h}/lib/list.zsh"
 . "${0:A:h}/lib/usage.zsh"
 . "${0:A:h}/lib/vars.zsh"
 . "${0:A:h}/lib/version.zsh"
@@ -35,6 +36,9 @@ fi
 case "${GOTO_COMMAND}" in
     bind)
         __goto_bind || return
+        ;;
+    list)
+        __goto_list || return
         ;;
     unbind)
         __goto_unbind || return
