@@ -1,4 +1,11 @@
 #!/usr/bin/env zsh
+
+if [[ "${EUID}" -eq 0 ]]; then
+    echo "error: must not run with sudo"
+    
+    return 1
+fi
+
 . "${0:A:h}/lib/list.zsh"
 . "${0:A:h}/lib/usage.zsh"
 . "${0:A:h}/lib/vars.zsh"
